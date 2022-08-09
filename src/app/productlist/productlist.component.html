@@ -1,0 +1,23 @@
+<h1> Product List</h1>
+<table border="1">
+  <tr>
+    <td>Id</td>
+  <td>Name</td>
+  <td>Price</td>
+  <td>Quantity</td>
+  <td>MF_Date</td>
+  <td>Edit</td>
+  <td>Delete</td>
+  </tr>
+
+  <tr *ngFor="let p of plist">
+  <td>{{p.id}}</td>
+  <td>{{p.productname}}</td>
+  <td>{{p.price}}</td>
+  <td>{{p.quantity}}</td>
+  <td>{{p.mfd|date:'shortDate'}}</td>
+  <td> <a [routerLink]="['edit',p.id]"> Edit</a></td>
+  <td> <a (click)="deleteProduct(p.id)" href="javascript:void()">Delete</a></td>
+</tr>
+
+</table>

@@ -1,0 +1,33 @@
+<h3>Edit</h3>
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <p>
+        <label for="id">Id</label>
+        <input type="number" name="id" ng-placeholder="Enter id" class="form-control" [(ngModel)]="currentproduct.id"/>
+    </p>
+    <p>
+        <label for="productname">ProductName</label>
+        <input type="text" name="productname" ng-placeholder="Enter product name" class="form-control" [(ngModel)]="currentproduct.productname"/>
+    </p>
+    <p>
+        <label for="price">Price</label>
+        <input type="number" name="price" ng-placeholder="enter price" class="form-control" [(ngModel)]="currentproduct.price"/>
+    </p>
+    <p>
+        <label for="quantity">Quantity</label>
+        <input type="number" name="Quantity" ng-placeholder="enter quantity" class="form-control" [(ngModel)]="currentproduct.quantity"/>
+    </p>
+    <p>
+        <label for="mfd">Manufacture Date</label>
+        <input type="date" name="mfd" ng-placeholder="enter Manufacture date" class="form-control" [(ngModel)]="currentproduct.mfd"/>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+    
+    
+</form>
+{{myform.value|json}}
+<br>
+touched:{{myform.touched}}<br>
+dirty:{{myform.dirty}}<br>
+pristine:{{myform.pristine}}

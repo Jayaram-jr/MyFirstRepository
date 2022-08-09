@@ -1,0 +1,28 @@
+<h1>New Product to Add</h1>
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <p>
+        <label for="id">Id</label>
+        <input type="number" name="id" ngModel placeholder="enter id" class="form-control">
+    </p>
+    <p>
+        <label for="productname">ProductName</label>
+        <input type="text" name="productname" ngModel placeholder="enter product name" class="form-control">
+    </p>
+    <p>
+        <label for="price">Price</label>
+        <input type="number" name="price" ngModel placeholder="enter price" class="form-control">
+    </p>
+    <p>
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" ngModel placeholder="enter quantity" class="form-control">
+    </p>
+    <p>
+        <label for="mfd">Manufacture Date</label>
+        <input type="date" name="mfd" ngModel placeholder="enter Manufacture date" class="form-control">
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+    
+    
+</form>
